@@ -233,6 +233,12 @@ if (settingsCount === 0) {
     whatsapp_number: "916356647453",
     free_shipping_minimum: "25000",
     gst_percentage: "3",
+    gold_rate_24k: "8550",
+    gold_rate_22k: "7840",
+    gold_rate_18k: "6413",
+    silver_rate: "100",
+    platinum_rate: "3150",
+    use_live_rates: "false",
   };
   const insertSetting = db.prepare("INSERT INTO settings (key, value) VALUES (?, ?)");
   Object.entries(defaults).forEach(([k, v]) => insertSetting.run(k, v));

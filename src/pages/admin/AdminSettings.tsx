@@ -86,6 +86,34 @@ const AdminSettings = () => {
             </div>
           </div>
         </div>
+
+        {/* Metal Rates */}
+        <div className="bg-background border border-border p-6">
+          <h2 className="font-display text-sm text-foreground mb-4 uppercase tracking-wider">Metal Rates (Price per Gram in ₹)</h2>
+          <p className="text-[10px] text-muted-foreground font-body mb-4">Set these manually to ensure price stability for your clients. Changes take effect instantly.</p>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div>
+              <label className="text-xs font-body uppercase tracking-wider text-muted-foreground mb-1 block">Gold 24K (Pure)</label>
+              <input type="number" className={inputClass} value={settings.gold_rate_24k || ""} onChange={e => update("gold_rate_24k", e.target.value)} />
+            </div>
+            <div>
+              <label className="text-xs font-body uppercase tracking-wider text-muted-foreground mb-1 block">Gold 22K (Jewelry)</label>
+              <input type="number" className={inputClass} value={settings.gold_rate_22k || ""} onChange={e => update("gold_rate_22k", e.target.value)} />
+            </div>
+            <div>
+              <label className="text-xs font-body uppercase tracking-wider text-muted-foreground mb-1 block">Gold 18K</label>
+              <input type="number" className={inputClass} value={settings.gold_rate_18k || ""} onChange={e => update("gold_rate_18k", e.target.value)} />
+            </div>
+            <div>
+              <label className="text-xs font-body uppercase tracking-wider text-muted-foreground mb-1 block">Silver</label>
+              <input type="number" className={inputClass} value={settings.silver_rate || ""} onChange={e => update("silver_rate", e.target.value)} />
+            </div>
+            <div>
+              <label className="text-xs font-body uppercase tracking-wider text-muted-foreground mb-1 block">Platinum</label>
+              <input type="number" className={inputClass} value={settings.platinum_rate || ""} onChange={e => update("platinum_rate", e.target.value)} />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
